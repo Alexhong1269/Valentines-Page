@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let i = Math.floor(Math.random() * maxWidth);
             let j = Math.floor(Math.random() * maxHeight);
 
-            b.style.position = "absolute"; // Ensure the position is set
+            b.style.position = "absolute";
             b.style.left = i + "px";
             b.style.top = j + "px";
         });
