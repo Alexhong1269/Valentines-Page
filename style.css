@@ -23,3 +23,8 @@ img{
     align-items: center;
     height: 30px
 }
+
+#movingbutton {
+    position: flex; 
+    transition: left 0.2s, top 0.2s;
+}

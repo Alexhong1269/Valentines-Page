@@ -1,11 +1,17 @@
-var b = document.querySelector("#movingbutton");
-b.addEventListener("click", change);
+document.addEventListener("DOMContentLoaded", function () {
+    var b = document.querySelector("#movingbutton");
 
-function change(){
-    let i = Math.floor(Math.random() * 500) + 1;
-    let j = Math.floor(Math.random() * 500) + 1;
+    if (b) {
+        b.addEventListener("click", function () {
+            let maxWidth = window.innerWidth - b.offsetWidth;
+            let maxHeight = window.innerHeight - b.offsetHeight;
 
-    console.log('here', i, j, b.style.left, b.style.top);
-    b.style.left = i + 'px'
-    b.style.top = j + 'px'
-}
+            let i = Math.floor(Math.random() * maxWidth);
+            let j = Math.floor(Math.random() * maxHeight);
+
+            b.style.position = "absolute"; // Ensure the position is set
+            b.style.left = i + "px";
+            b.style.top = j + "px";
+        });
+    }
+});
